@@ -3,6 +3,7 @@ from contact.models import Contact
 
 class ContactForm(forms.ModelForm):
     First_Name = forms.CharField(
+        label = "First Name",
         widget = forms.TextInput(
             attrs = {
                 "id": "FirstName",
@@ -13,6 +14,7 @@ class ContactForm(forms.ModelForm):
     )
     
     Last_Name = forms.CharField(
+        label = "Last Name",
         widget = forms.TextInput(
             attrs = {
                 "id": "LastName",
@@ -23,6 +25,7 @@ class ContactForm(forms.ModelForm):
     )
 
     Email = forms.EmailField(
+        label = "email",
         widget = forms.EmailInput(
             attrs = {
                 "id": "Email",
@@ -33,6 +36,7 @@ class ContactForm(forms.ModelForm):
     )
 
     Phone = forms.CharField(
+        label = "Phone Number:",
         widget = forms.TextInput(
             attrs = {
                 "id": "Phone",
@@ -44,6 +48,7 @@ class ContactForm(forms.ModelForm):
     )
 
     Subject = forms.CharField(
+        label = "Subject:",
         widget = forms.TextInput(
             attrs = {
                 "id": "Subject",
@@ -54,6 +59,7 @@ class ContactForm(forms.ModelForm):
     )
 
     Message = forms.CharField(
+        label = "Message:",
         widget = forms.Textarea(
             attrs = {
                 "id": "Message",

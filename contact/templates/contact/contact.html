@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="description" content="Sudani Coder Freelancer Full Stack Web Developer">
+		<meta name="keywords" content="Sudani Coder Freelancer Full Stack Web Developer, sudani coder, coder, freelancer, full stack web developer, web designer, web developer, python developer, frontend, backend, vscode, HTML, CSS, XML, JavaScript, python, django, sql, database, web design, web development, seo, secure, responsive design, full support, clean code, coding">
+		<meta name="author" content="Sudani Coder">
+        <title>Sudani Coder</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+		<link rel="stylesheet" type="text/css" href="{% static './css/normalize.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static './css/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static './css/freelancer.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static './css/style.css' %}">
+    </head>
+    <body>
+        <nav id="Nav_Bar" class="navbar navbar-expand-lg text-uppercase">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span class="primary-color">&lt;&num;</span>Sudani<span class="primary-color">&lowbar;</span>Coder<span class="primary-color">&excl;&sol;&gt;</span>
+                </a>
+            </div>
+        </nav>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col mt-4">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <a class="btn btn-primary my-2 px-4 py-2" href="{% url 'contact:index' %}">Go Back To Home Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -205,7 +205,7 @@
                         <img class="rounded mx-auto d-block" src="{% static './img/support.svg' %}" width="150px" height="150px" alt="Full Support" title="Full Support">
                         <h3 class="text-center">Full Support</h3>
                         <p class="text-justify text-muted">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt odio, eius dolorem consequatur rem aliquid repellendus dolorum doloremque consequuntur quisquam quas modi architecto nam neque cupiditate est officiis quasi quia!
+                            Provide you with full technical support for your web app and updates if needed.
                         </p>
                         <a href="#contact" class="btn btn-outline-primary btn-md btn-order">order now</a>
 					</div>
@@ -213,8 +213,7 @@
 						<img class="rounded mx-auto d-block" src="{% static './img/clean-code.svg' %}" width="150px" height="150px" alt="Clean Code" title="Clean Code">
 						<h3 class="text-center">Clean Code</h3>
 						<p class="text-justify text-muted">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam ducimus cupiditate qui laboriosam, laborum et quia, ullam officia quibusdam in deleniti dolore consequatur ratione placeat eius, ad doloremque quasi veritatis?
-							Deserunt doloribus pariatur.
+							I follow the best practices to writing code free of bugs and fully functional.
 						</p>
 						<a href="#contact" class="btn btn-outline-primary btn-md btn-order">order now</a>
 					</div>
@@ -224,7 +223,7 @@
 						<img class="rounded mx-auto d-block" src="{% static './img/cyber-security.svg' %}" width="150px" height="150px" alt="secure" title="secure">
 						<h3 class="text-center">Secure</h3>
 						<p class="text-justify text-muted">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla dolores atque eligendi nisi velit excepturi voluptates facilis blanditiis. Necessitatibus dolorum molestias repudiandae sit laudantium iste quaerat id ipsum, illo nemo!
+							Protect your web application from hacker's and common cyber attacks.
 						</p>
 						<a href="#contact" class="btn btn-outline-primary btn-md btn-order">order now</a>
 					</div>
@@ -232,8 +231,11 @@
 						<img class="rounded mx-auto d-block" src="{% static './img/www.svg' %}" width="150px" height="150px" alt="seo" title="seo">
 						<h3 class="text-center">SEO</h3>
 						<p class="text-justify text-muted">
-							search engine optimization.<br>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias voluptate dolorem eum vitae esse quasi rem cumque quo autem officia ipsam, est cupiditate ea. Provident modi nulla laudantium quis omnis!
+							Search engine optimization.
+							<br>
+							Add your website to popular search engines.
+							<br>
+							Search engine optimization is the process of increasing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.
 						</p>
 						<a href="#contact" class="btn btn-outline-primary btn-md btn-order">order now</a>
 					</div>
@@ -298,30 +300,32 @@
 				<!-- Contact Section Form -->
 				<div class="row">
 					<div class="col-md m-3 p-4 text-dark bg-light shadow rounded">
-						<form name="contactMe" id="contactForm" action="/" method="POST">
+						<form name="contactMe" id="contactForm" action="" method="POST" onsubmit="return MyMsg()">
 							{% csrf_token %}
 							<div class="form-row">
 								<div class="form-group col-md">
-									<label for="FirstName">First name:</label>
+									{{ form.First_Name.label_tag }}
 									{{ form.First_Name }}
 								</div>
 								<div class="form-group col-md">
-									<label for="LastName">Last name:</label>
+									{{ form.Last_Name.label_tag }}
 									{{ form.Last_Name }}
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="Email">Email:</label>
+								{{ form.Email.label_tag }}
 								{{ form.Email }}
 							</div>
 							<div class="form-group">
-								<label for="Phone">Phone number:</label>
+								{{ form.Phone.label_tag }}
 								{{ form.Phone }}
 							</div>
 							<div class="form-group">
+								{{ form.Subject.label_tag }}
 								{{ form.Subject }}
 							</div>
 							<div class="form-group">
+								{{ form.Message.label_tag }}
 								{{ form.Message }}
 							</div>
 							<input class="btn btn-primary px-4 py-2" type="submit" value="Send">
@@ -348,13 +352,13 @@
 					<!-- Footer Social Icons -->
 					<div class="col-lg-4 mb-5 mb-lg-0">
 						<h4 class="text-uppercase mb-4">Around the Web</h4>
-						<a class="btn btn-outline-light btn-social mx-1" href="#">
+						<a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/WIZOMARTHE3PRO">
 							<i class="fa fa-fw fa-facebook-f"></i>
 						</a>
-						<a class="btn btn-outline-light btn-social mx-1" href="#">
+						<a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/WIZOMERTHEBRO">
 							<i class="fa fa-fw fa-twitter"></i>
 						</a>
-						<a class="btn btn-outline-light btn-social mx-1" href="#">
+						<a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/omer-taha-497736196/">
 							<i class="fa fa-fw fa-linkedin"></i>
 						</a>
 						<a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Sudani-Coder">
